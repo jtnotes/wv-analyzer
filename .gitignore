@@ -1,0 +1,10 @@
+/web/dist
+/web/temp
+/web/test*
+TEMP
+node_modules/
+venv
+.cache
+.vscode
+package-lock.json
+*.pyc
