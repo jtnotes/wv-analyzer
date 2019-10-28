@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import FilePanel from './component/FilePanel'
+import FilePanel from './components/FilePanel'
 // import Content from './Content'
 
 class App extends React.Component {
