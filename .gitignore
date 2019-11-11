@@ -1,6 +1,8 @@
 /web/dist
 /web/temp
 /web/test*
+/web/design
+/web/components2
 TEMP
 node_modules/
 venv

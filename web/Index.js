@@ -1,22 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
-import FilePanel from './component/FilePanel'
-// import Content from './Content'
+import Store from './store/Store'
+import FilePanel from './components/FilePanel'
+import App from './App'
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <FilePanel />
-                
-            </div>
-        )
-    }
-}
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Provider store={Store}>
+    <App />
+</Provider>, document.getElementById('app'));

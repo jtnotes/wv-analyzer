@@ -1,17 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import ReactDOM from "react-dom"
+import Constants from '../Constants'
 
 class FilePanel extends React.Component {
     constructor(props) {
         super(props);
     }
 
+    toOverview = () => {
+        this.props.changeView(Constants.VIEW_SUMMARY);
+    }
+
     render() {
         return (
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="https://bulma.io">
-                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+            <nav className="navbar wa-navbar" role="navigation" aria-label="main navigation">
+                <div className="navbar-brand">
+                    <a className="navbar-item" href="https://bulma.io">
+                        <img src="design/retro-futuristic-landscape-universe-background/2616071.svg" width="28" height="28" />
                     </a>
 
                     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -23,30 +28,45 @@ class FilePanel extends React.Component {
 
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item">Home</a>
+                        <a className="navbar-item" onClick={this.toOverview}>Overview</a>
+                        
+                        <div className="navbar-item">
+                            <div className="buttons">
+                                <div className="file has-name">
+                                    <label className="file-label">
+                                        <input className="file-input" type="file" name="resume" />
+                                        <span className="file-cta">
+                                            <span className="file-icon">
+                                                <i className="fas fa-upload"></i>
+                                            </span>
+                                            <span className="file-label">                                                        Choose a file…      </span>
+                                        </span>
+                                        <span className="file-name">                                                    Screen Shot 2017-07-29 at 15.54.25.png    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
-                        <a class="navbar-item">Documentation</a>
+                        <div className="navbar-item has-dropdown is-hoverable">
+                            <a className="navbar-link">More</a>
 
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">More</a>
-
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">About</a>
-                                <a class="navbar-item">Jobs</a>
-                                <a class="navbar-item">Contact</a>
-                                <hr class="navbar-divider" />
-                                <a class="navbar-item">Report an issue</a>
+                            <div className="navbar-dropdown">
+                                <a className="navbar-item">About</a>
+                                <a className="navbar-item">Jobs</a>
+                                <a className="navbar-item">Contact</a>
+                                <hr className="navbar-divider" />
+                                <a className="navbar-item">Report an issue</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-primary">
+                    <div className="navbar-end">
+                        <div className="navbar-item">
+                            <div className="buttons">
+                                <a className="button is-primary">
                                     <strong>Sign up</strong>
                                 </a>
-                                <a class="button is-light">Log in</a>
+                                <a className="button is-light">Log in</a>
                             </div>
                         </div>
                     </div>
