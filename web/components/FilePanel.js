@@ -29,60 +29,42 @@ class FilePanel extends React.Component {
                 <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
                         <a className="navbar-item" onClick={this.toOverview}>Overview</a>
-                            <div class="buttons">
-                                <div class="file has-name">
-                                    <label class="file-label">
-                                        <input class="file-input" type="file" name="resume" />
-                                        <span class="file-cta">
-                                            <span class="file-icon">
-                                                <i class="fas fa-upload"></i>
-                                            </span>
-                                            <span class="file-label">                                                        Choose a fileâ€     </span>
+                        <div class="buttons">
+                            <div class="file has-name">
+                                <label class="file-label">
+                                    <input class="file-input" type="file" name="resume" />
+                                    <span class="file-cta">
+                                        <span class="file-icon">
+                                            <i class="fas fa-upload"></i>
                                         </span>
-                                        <span class="file-name">                                                    Screen Shot 2017-07-29 at 15.54.25.png    </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="navbar-item">
-                            <div className="buttons">
-                                <div className="file has-name">
-                                    <label className="file-label">
-                                        <input className="file-input" type="file" name="resume" />
-                                        <span className="file-cta">
-                                            <span className="file-icon">
-                                                <i className="fas fa-upload"></i>
-                                            </span>
-                                            <span className="file-label">                                                        Choose a fileâ€     </span>
-                                        </span>
-                                        <span className="file-name">                                                    Screen Shot 2017-07-29 at 15.54.25.png    </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link">More</a>
-
-                            <div className="navbar-dropdown">
-                                <a className="navbar-item">About</a>
-                                <a className="navbar-item">Jobs</a>
-                                <a className="navbar-item">Contact</a>
-                                <hr className="navbar-divider" />
-                                <a className="navbar-item">Report an issue</a>
+                                        <span class="file-label">                                                        Choose a fileï¿½     </span>
+                                    </span>
+                                    <span class="file-name">                                                    Screen Shot 2017-07-29 at 15.54.25.png    </span>
+                                </label>
                             </div>
                         </div>
                     </div>
 
-                    <div className="navbar-end">
-                        <div className="navbar-item">
-                            <div className="buttons">
-                                <a className="button is-primary">
-                                    <strong>Sign up</strong>
-                                </a>
-                                <a className="button is-light">Log in</a>
-                            </div>
+                    <div className="navbar-item has-dropdown is-hoverable">
+                        <a className="navbar-link">More</a>
+
+                        <div className="navbar-dropdown">
+                            <a className="navbar-item">About</a>
+                            <a className="navbar-item">Jobs</a>
+                            <a className="navbar-item">Contact</a>
+                            <hr className="navbar-divider" />
+                            <a className="navbar-item">Report an issue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="navbar-end">
+                    <div className="navbar-item">
+                        <div className="buttons">
+                            <a className="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a className="button is-light">Log in</a>
                         </div>
                     </div>
                 </div>
