@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import Constants from './Constants'
 import FilePanelCTN from './containers/FilePanelCTN'
+import Summary from './components/views/Summary'
 
 class App extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class App extends React.Component {
             );
         } else if (this.props.view == Constants.VIEW_SUMMARY) {
             viewElement = (
-                <div>summary</div>
+                <Summary />
             );
         }
 
@@ -33,7 +34,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    view: state.view
+    view: state.view,
+    wvStat: state.wvStat
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

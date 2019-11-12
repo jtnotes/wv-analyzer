@@ -1,10 +1,30 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import axios from 'axios'
+
 import Constants from '../Constants'
 
 class FilePanel extends React.Component {
     constructor(props) {
         super(props);
+    }
+
+    load = () => {
+        axios.post(`http://localhost:5000/setWVFile`, {
+            file: this.props.wvFile,
+            type: this.props.wvType
+        }).then(res => {
+            console.log(res.data);
+            this.props.setStat(res.data);
+            // this.setState({
+            //     wvLoaded: true,
+            //     wvStat: res.data
+            // });
+        });
+    }
+
+    setFile = (e) => {
+        this.props.setFile(e.target.value);
     }
 
     toOverview = () => {
@@ -30,18 +50,10 @@ class FilePanel extends React.Component {
                     <div class="navbar-start">
                         <a className="navbar-item" onClick={this.toOverview}>Overview</a>
                         <div class="buttons">
-                            <div class="file has-name">
-                                <label class="file-label">
-                                    <input class="file-input" type="file" name="resume" />
-                                    <span class="file-cta">
-                                        <span class="file-icon">
-                                            <i class="fas fa-upload"></i>
-                                        </span>
-                                        <span class="file-label">                                                        Choose a file�     </span>
-                                    </span>
-                                    <span class="file-name">                                                    Screen Shot 2017-07-29 at 15.54.25.png    </span>
-                                </label>
+                            <div class="control">
+                                <input className="input is-primary wa-fp-filename" type="text" placeholder="Primary input" onChange={this.setFile} defaultValue="/home/JinReal/prog/nlpworkspace/wv-tour/" />
                             </div>
+                            <a className="button" onClick={this.load}>load</a>
                         </div>
                     </div>
 

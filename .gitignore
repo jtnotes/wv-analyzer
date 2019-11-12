@@ -3,6 +3,7 @@
 /web/test*
 /web/design
 /web/components2
+/server/tmp
 TEMP
 node_modules/
 venv

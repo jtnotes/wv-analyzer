@@ -5,3 +5,7 @@ body {
 .wa-navbar   {
     background-color: #d2c357;
 }
+
+.wa-fp-filename {
+    width: 450px;
+}

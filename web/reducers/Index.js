@@ -1,7 +1,11 @@
 import Constants from '../Constants';
 
 const initialState = {
-    view: Constants.DEFAULT_VIEW
+    view: Constants.DEFAULT_VIEW,
+    wvFile: 'N/A',
+    wvType: 'gensim',
+    wvLoaded: false,
+    wvStat: {}
 }
 
 function rootReducer(state = initialState, action) {
@@ -18,6 +22,20 @@ function rootReducer(state = initialState, action) {
                     view: action.view
                 });
             }
+            break;
+
+        case 'SET_FILE':
+            return Object.assign({}, state, {
+                wvFile: action.wvFile,
+                wvLoaded: false
+            });
+            break;
+
+        case 'SET_STAT':
+            return Object.assign({}, state, {
+                wvStat: action.wvStat,
+                wvLoaded: true
+            });
             break;
 
         default:
